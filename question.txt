@@ -1,0 +1,19 @@
+1/31/2019
+1. After if while there is [], but after for there isn't []
+    [] is a operation symbolic. 
+2. Is ; necessary when using if while for?
+    ; is used for seperate two commands in a line.
+3. shutdown.sh, why without ls, the script doen't work?
+       
+
+2/1/2019
+
+1. how to remove a user
+    sudo userdel -f -r baoqin1
+2. how add user group 
+    sudo useradd
+
+2/6/2019
+1. cannot find the .profile to change PATH  
+2. how to update fedora package manager
+3. 
