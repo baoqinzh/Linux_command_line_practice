@@ -1,0 +1,4 @@
+#https://www.dropbox.com/home/baoqin/commandlinepractice?preview=grep.txt
+#https://www.dropbox.com/home/baoqin/commandlinepractice?preview=file.txt
+https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/
+https://en.wikipedia.org/wiki/Unix_philosophy

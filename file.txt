@@ -18,6 +18,10 @@
 18. chmod u+rwx
 19. chmod g=r
 20. chmod o-rwx / a+rwx all users
+    chown baoqin file.txt # change the owner of the file
+    chown -R user directory/ # change all the files in a directory
+    chgrp baoqin file.txt # change the group of the file
+
 21. sudo chown root file change owner of the file
 22. hard link points to the data on the disk ln original_file link_file
 23. soft link points to a file on the disk ln -s original_file link_file
@@ -167,4 +171,6 @@ DNF
 1. dnf upgrade
 2. dnf check-update
 3. dnf upgrade package_name
+
+
 
