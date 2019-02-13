@@ -1,0 +1,176 @@
+1. file file_name
+2. stat file_name
+3. cd - back to the previously used folder
+4. cd  back to the home folder
+5. cd / back to the root folder
+6. mkdir -p new_folder/sub_folder make parent folder and sub folder
+7. cp file1 file2
+8. cp file1 directory copy the file to another dircetory
+9. mv rename or move a file
+10. mv dir/fille . move the file to the current directory
+11. common wildcards, * stands for any number of characters, ? stands for one character. asterisk
+12. mv dir/* . move all the files in the directory to the current folder
+13. find . -name "baoq*"
+14. find ~/ -name "baoq*" ~ home directory
+15. sudo ls /root
+16. sudo -k end the sudo permission
+17. sudo -s change to the root user
+18. chmod u+rwx
+19. chmod g=r
+20. chmod o-rwx / a+rwx all users
+    chown baoqin file.txt # change the owner of the file
+    chown -R user directory/ # change all the files in a directory
+    chgrp baoqin file.txt # change the group of the file
+
+21. sudo chown root file change owner of the file
+22. hard link points to the data on the disk ln original_file link_file
+23. soft link points to a file on the disk ln -s original_file link_file
+
+mkdir
+rmdir
+mv  move or rename files or directory
+rm delete files or directory
+rmdir remove empty directory
+rmdir -p folder/subfolder # remove subfolder and it's ancestor
+rm -r folder # remove folder and it's subfolder
+find /etc/ -name lvm 2>/dev/null
+
+echo abc | grep abc
+echo -e "\n\tHello from the Test Script! \n "
+
+
+ls -l
+ll
+
+ps -elf #process snapshot -elf about information of threads
+
+pstree #a tree of process
+
+echo $? #last command exit number, 0 true, others false
+
+1. Control + A move to the beginning of the line
+2. control + E move to the end of the line
+3. Control + left arrow and control + right arrow move backward and forward one word at a time
+4. Control + U deletes from the cursor position to the beginning of the line
+5. control + K deletes from the cursor position to the end of the line.
+6. control + shift + C and control + shift + V to do that instead of the regular control + C and control + V.
+7. control + R search your command history
+8. ls --help
+9. ls -lh long listing format hunman readable
+9. help
+10. apropos "list" To help you look up a command by its description rather than its name
+11. prompt
+12. slash, back slash
+13.  The command line is also called the shell
+14. A shell that's available on many different platforms is called bash
+15. '' doesn't input variables
+16. curl transfer data
+
+
+filesystem
+/ root highest level of filesystem hierarchy
+home store user home folders
+root store root home folders
+etc configuration files for many tools
+bin  store binaries programs
+sbin  store binaries programs
+lib libriaries and shared modules
+dev repesents device on the system
+mnt local and remote filesystem mounted
+media removable storage is mounted
+proc contains references to processes that are running on the system and has details of other aspects of the system as well.
+sys which holds files representing different kernel parameters and system information
+
+pipe
+
+1. echo "hello“ | wc words count
+2. cat filename
+3. head -n5 filename
+4. tail -n5 filename
+5. cat filename | cat -n | tail -n5
+6. less filename
+7. grep -n "pattern" filename
+8. grep -E "[hijk]" filename
+9. grep -E "\w{6,}" filename
+10. grep -vi "the" filename  omit the 
+
+awk
+1. awk '{print $2}' grep.txt
+2. awk '{print $2 "\t" $1}' grep.txt | sort -n
+
+sed
+1. sed "s/grep/Just A Test/" grep.txt To modify information from a file or stream 
+
+sort
+1. sort grep.txt
+2. sort -k2 -n  grep.txt
+3. sort -u grep.txt 
+
+rev
+tac 
+tr
+
+vi
+1. sudo apt install vim 
+2. shift i  insert text infront of a line 
+3. o open up a new line after the current line
+4. shift g move to the bottom of the file.
+5. 1 shift g move to the top of the file
+6.  I can move backward and forward by sentence using the left and right parentheses keys. ()  //?
+7. forward and backward by paragraph using the left and right curly braces {}
+8. nano is another text editor
+
+TAR ZIP
+1. TAR files, short for Tape ARchive files, are still incredibly common for software distribution across Linux and macOS. TAR files, unlike ZIP files, don't offer compression themselves
+2. .tar.gz, .tgz, .tar.bz2
+3. tar cvf myfiles.tar Exercise\ Files/. #The C option says to create an archive.The V tells the TAR tool to be verbose, that is to list out each file that gets added to the archive.The F option tells the TAR command to output the archive to a file.
+4. tar caf myfiles1.tar.gz   directory. # The A option tells TAR to figure out what kind of compression to use based on the file extension. In this case .gz
+5. tar caf myfiles1.tar.bz2 directory. 
+6. tar xf myfiles1.tar.bz2  #unpack the tar file to the current location
+7. tar xf myfiles1.tar.gz -C directory #The capital C option specifies a directory to change into for unarchiving
+8. zip -r myfiles1.zip directory
+9. unzip myfiles1.zip 
+
+output redirection
+1. 0 stdin standar input
+   1 stdout standar output
+   2 stderr standar error
+2. ls > lsfile.txt equals ls 1>lsfile.txt
+   ls nofile 2>lsfileErr.txt
+3. ls >>lsfile.txt # append information to the file
+
+enviroment variables
+1. env list the enviroment variables 
+2. which ls #find where is the ls command
+3. .profile change the PATH # .profile is a hidden file in home directory
+
+
+1. cat auth.log | grep "input_userauth_request" | awk "{pring $9}" > users.txt
+
+distro and kernal 
+1. ls -lah /etc/*release
+2. cat  /etc/*relea*
+3. uname -a #show kernal information
+
+hardwear
+1. free -h # find out how much RAM this machine has
+2. cat /proc/cpuinfo # find out the cpu information
+3. df -h # how much space is taken up and how much is available on the system's hard drive
+4. sudo du / -hd1 #du command for disk usage, and then slash, which is the level I want to start from, right at the root. the d option shows the du command what level of detail to show.
+5. sudo lshw | less
+6. ip a 
+
+package manager
+1. Debian, ubuntu,etc use APT package manager, APT stands for Advanced Package Tool
+2. Red Hat, CentOS use YUM package manager
+3. Fedora use DNF
+4. SUSE  use YaST
+5. Arch Pacman
+
+DNF
+1. dnf upgrade
+2. dnf check-update
+3. dnf upgrade package_name
+
+
+
